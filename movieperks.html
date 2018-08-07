@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Spaniard Reviews</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+
+          <h1><a href="Home_Page_App.html">Spaniard<span class="logo_colour"> Reviews</span></a></h1>
+          <h2>Fun movie reviews with Geek Out moments!</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+
+          <li><a href="Home_Page_App.html">Home</a></li>
+          <li><a href="newreviews.html">Newest Reviews</a></li>
+          <li><a href="comingsoon.html">Coming Soon</a></li>
+          <li class="selected"><a href="movieperks.html">Movie Perks</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+
+        <h3>Latest News</h3>
+        <h4>Updates!!!</h4>
+        <h5>July 21, 2018</h5>
+        <p>The site now has links to latest reviews, perk ideas for the communtiy and a new coming soon directory!!! Please contact us for any questions!<br /><a href="#">Read more</a></p>
+        <h3>Movie Review Links!</h3>
+        <ul>
+          <li><a href="#">link 1</a></li>
+          <li><a href="#">link 2</a></li>
+          <li><a href="#">link 3</a></li>
+          <li><a href="#">link 4</a></li>
+        </ul>
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <p><a href="Home_Page_App.html">BACK</a></p>
+
+        <div data-role="page" id="form" data-theme="a" data-add-back-btn="true">
+          <div data-role="header" data-theme="a" data-add-back-btn="true">
+            <h1>Movie Perks!!!!</h1>
+          </div>
+        	<div data-role="content">
+
+        Add to the list of what you would like as a perk being in the Movie Reviews community!!!!
+
+        </p>
+
+        <textarea class="localstorage" placeholder="Anything you type here will be saved with HTML5 localStorage." autofocus></textarea>
+
+        <button class="clear">Clear</button>
+
+        <button class="empty">Empty</button>
+
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+  </div>
+  <div data-role="footer">
+        <p><a href="">SPANIARD REVIEWS Copyright &copy;</a></p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+<script>
+
+(function() {
+
+var rasm = document.querySelector('.localstorage');
+
+function supportsLocalStorage() {
+
+return typeof(Storage)!== 'undefined';
+
+}
+
+if (!supportsLocalStorage()) {
+
+rasm.value = 'Your browser does not support localStorage.';
+
+} else {
+
+try {
+
+setInterval(function() {
+
+localStorage.setItem('autosave', rasm.value);
+
+}, 1000);
+
+} catch (e) {
+
+if (e == QUOTA_EXCEEDED_ERR) {
+
+alert('Quota exceeded!');
+
+}
+
+}
+
+if (localStorage.getItem('autosave')) {
+
+rasm.value = localStorage.getItem('autosave');
+
+}
+
+document.querySelector('.clear').onclick = function() {
+
+rasm.value = '';
+
+localStorage.removeItem('autosave');
+
+};
+
+document.querySelector('.empty').onclick = function() {
+
+rasm.value = '';
+
+localStorage.clear();
+
+};
+
+}
+
+})();
+
+</script>

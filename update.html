@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
+</head>
+<body style="background-color:teal;">
+
+<ul>
+  <li><a href="Course_Project_Grocery.html">Home</a></li>
+  <li><a href="inventory.html">Inventory</a></li>
+  <li><a class="active" href="add.html">Add</a></li>
+  <li><a href="delete.html">Delete</a></li>
+  <li><a href="update.html">Update</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+<h2>eZ Grocery Inventory</h2>
+<img src="main.jpg" alt="Trulli" width="1000" height="533">
+
+<div data-role="page" id="form" data-theme="a" data-add-back-btn="true">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Update Item</h1>
+  </div>
+  <div data-role="content">
+
+	<form action="form.php" method="post">
+		  <label for="fname">Item name:</label>
+      <input type="text" placeholder="99999" name="fname" id="fname" data-clear-btn="true">
+			<label for="fname">Quantity:</label>
+      <input type="text" placeholder="99999" name="fname" id="fname" data-clear-btn="true">
+      <label for="fname">Category:</label>
+			<input type="text" placeholder="99999" name="fname" id="fname" data-clear-btn="true">
+		</form>
+
+    <button onclick="myFunction()">Submit</button>
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById("add.html");
+      alert("Item has been updated!");
+  }
+  </script>
+
+	</div>
+</div>
+<div data-role="footer" data-theme="a">
+  <h4>Grocery Project &copy; 2018</h4>
+</div>
+</body>
+</html>
